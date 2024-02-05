@@ -19,8 +19,10 @@ W folderze good/ znajdują się przykłady dobrego użycia, a w folderze bad/ z�
 Uruchomienie interpretera:
 1. make
 2. ./interpreter "nazwa-programu"
+
 Czyszczenie plików:
 1. make clean
+   
 Uwaga: Pliki w folderze Grammar są CZĘŚCIOWO wygenerowane przy pomocy programu bnfc na gramatyce zapisanej w grammar.cf. Oznacza to, że nie należy go usuwać i ponownie generować, ponieważ zmiany naniesione ręcznie nie zostaną zaaplikowane, co spowoduje problemy przy kompilacji interpretera
 
 Opis języka:
