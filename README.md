@@ -1,46 +1,52 @@
 # SymmLang
-Interpreter for my language, implemented in Haskell
+Interpreter for my language (Symm), implemented in Haskell
 
-Dostarczone funkcjonalności języka :
-1. (trzy typy -> Int, Bool, String)
-2. (literały, arytmetyka, porównania)
-3. (zmienne, przypisanie)
-4. (print)
-5. (while, if)
-6. (funkcje lub procedury, rekurencja)
-7. (zmienne read-only i pętla for)
-8. (statyczne wiązanie)
-9. (obsługa błędów wykonania)
-10. (funkcje zwracające wartość)
-11. (funkcje zagnieżdżone ze statycznym wiązaniem)
+What does the language allow:
+1. three types -> Int, Bool, String, FunT
+2. literals, arithmetics, comparison
+3. variables, variable assignment
+4. read-only variables
+5. static attachment
+6. for loop, while loop, if
+7. functions and procedures
+8. nested functions with static attachment
+9. recursion
+10. Print function
+11. error handling
 
-W folderze good/ znajdują się przykłady dobrego użycia, a w folderze bad/ złego.
+In good/ directory there are examples of good usage, and in a bad/ directory there are examples of bad usage. 
 
-Uruchomienie interpretera:
+How to run the interpreter:
 1. make
-2. ./interpreter "nazwa-programu"
+2. ./interpreter "program-name"
 
-Czyszczenie plików:
+Cleaning files:
 1. make clean
-   
-Uwaga: Pliki w folderze Grammar są CZĘŚCIOWO wygenerowane przy pomocy programu bnfc na gramatyce zapisanej w grammar.cf. Oznacza to, że nie należy go usuwać i ponownie generować, ponieważ zmiany naniesione ręcznie nie zostaną zaaplikowane, co spowoduje problemy przy kompilacji interpretera
 
-Opis języka:
-:> Należy pamiętać o ";" na końcach operacji (włącznie z operacjami blokowymi typu while () {};)
-:> W języku Symm instrukcje są czytane od góry do dołu i po kolei wykonywane.
-:> Zmienne są wiązane statycznie i nie wychodzą poza "scope", w którym zostały stworzone.
-:> Nie można jednak przesłaniać nazwy nowymi wartościami. W przypadku próby zdefiniowania zmiennej lub funkcji, która już istnieje, wyrzucony zostanie odpowiedni błąd na standardowe wyjście błędów.
-:> Poza trzema podstawowymi typami istnieje typ przechowujący funkcje - FunT. Można przekazać takiemu typowi wcześniej zdefiniowaną funkcję, a następnie odwoływać się do niej jak do zwykłej funkcji.
-:> Wspierane jest dodawanie Stringów do Stringów, Stringów do Intów oraz Stringów do Booli.
-:> Wspierane jest porównywanie przy pomocy "==" oraz "!=" Stringów i Booli.
+ATTENTION: Files in directory Grammar are partially auto generated with usage of bnfc program, based on grammar saved in grammar.cf file. Don't delete these files!
 
-Mniej typowa składnia:
-:> W przypadku zadeklarowania zmiennej bez zainicjowania jej, przypisana zostanie jej domyślna wartość (Int: 0, Bool: False, String: ""). Typ przechowujący funkcje nie posiada jednak domyślnej wartośc, dlatego w przypadku próby utworzenia typu FunT bez zainicjowania go, zostanie rzucony błąd o braku domyślnej wartości dla typu przetrzymującego funkcje
-:> Język udostępnia zmienne typu read-only dla typów Int, Bool oraz String. Deklaracja zmiennej read-only działa jak zwykła deklaracja z inicjalizacją, tylko zamiast "Let" należy użyć "Read". Podobnie jak typ FunT, nie wspierają one wartości domyślnych, zatem składnia np: "Read Int x;", czyli tworzenie zmiennej typu read-only bez inicjalizacji nie jest dozwolone i się nie sparsuje
-:> Nie istnieje typ Void
-:> Nie istnieje bezparametrowy "return;" ()
-:> Rozróżnienie pomiędzy if () {}, a eif () {} else {};
-:> Pętla for. Przykładowo następująca pętla: "for (i in 1...10) {};" wykona się od "i" równego 1 do "i" mniejszego od 10. Zmienna "i" jest typu read-only oraz kolejno przyjmie wartości 1,2,...,9 w kolejnych obrotach pętli
-:> Podczas definicji funkcji, jako argumenty należy podać jedynie nazwy argumentów (bez typu). Funkcja później może przyjąć dowolne argumenty. Sprawdzanie poprawności typów odbywa się dynamicznie - czyli tak długo jak podana jako argument wartość nie jest sprzeczna z wykonywanymi w funkcji operacjami, to żaden błąd nie zostanie podniesiony, a operacje poprawnie się wykonają
-:> Wbudowana funkcja "Print" działa analogicznie do Pythonowego printa, wypisuje kolejne wartości z przekazanej listy argumentów po spacji. Wypisywanie automatycznie kończy się znakiem końca linii.
-:> Funkcja Print wspiera typy Int, Bool oraz String zarówno zwykłe jak i read-only
+Language description:
+* To create a variable, there is a Let keyword
+* Remember about ';' character at the end of each operation (including block operations like "while () {};")
+* In the Symm language instructions are read C++ likewise (from up to bottom, from the left to the right)
+* Variables are attached statically, so after leaving the scope they can no longer be accessed
+* You CAN'T cover (Rust likewise) already existing variable/function name
+* Other than common variable types, there is a FunT type that stores functions
+* You can pass a function as an argument!
+* There is support for String and String, String and Int, String and Bool addition
+* There is support for equal comparison (== and !=) for comparing Strings with Strings and Bools with Bools
+
+Uncommon syntax:
+* In case of declaring a variable without initializing it, the default value will be assigned (0 for Int, False for Bool, and "" aka. empty string for String)
+* The FunT type does not have a default value, therefore in case of trying to create an uninitialized variable of type FunT, the Error will be thrown
+* The language supports read-only variables for Int, Bool, and String types. To create a read-only variable, there is a Read keyword
+* As before, read-only is not supported for FunT type
+* There is no Void type
+* There are two different if expressions.
+   * One for only if: if (expression) {};
+   * Second for if/else: eif (expression) {} else {};
+* For loop looks as follows: for (i in 1..10) {};. That loop would loop from i=1 to i<10 with jump 1. The variable i is read-only.
+* When declaring a function, you only assign arguments names (Python likewise). Then the function can take different types as arguments.
+* Type checking is dynamic. It means that as long as the operations are possible, there won't be any Error thrown.
+* Builtin Print function (Python likewise)
+* Print supports Strings, Ints and Bools - normal and read-only.
