@@ -1,11 +1,11 @@
-:> Funkcje
+:> Functions
 Fun String koza(x, y, z) {
     Print(x, y, z);
     return x + y + z;
 };
 Print(koza("KOZA", "W", "ZAŚWIATACH"));
 
-:> Rekurencja
+:> Recursion
 Fun Int gcd(a, b) {
     if (a % b == 0) {
         return b;
@@ -15,19 +15,19 @@ Fun Int gcd(a, b) {
 
 Print(gcd(6, 13));  :> 1
 Print(gcd(2048, 96));  :> 32
-Print(gcd(14369, 146543));  :> 1 (obie pierwsze)
+Print(gcd(14369, 146543));  :> 1 (Both are prime)
 
-:> Typ FunT
+:> Type FunT
 Fun Int x() {
     return 5;
 };
 Let FunT y = x;
-Print("Aplikacja zmiennej funkcyjnej:", y());
+Print("Function type application:", y());
 
-:> Brak typowania argumentów
+:> No argument types
 Fun String untyped(choice, differ) {
     eif (choice) {
-        return "NWD(14369, 146543) = " + differ(14369, 146543);
+        return "GCD(14369, 146543) = " + differ(14369, 146543);
     } else {
         return "Int: " + differ;
     };

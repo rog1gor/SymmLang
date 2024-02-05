@@ -1,4 +1,4 @@
-:> Odkomentuj wybrane
+:> Uncomment choosen
 Let Int x = 14369;
 Fun Int p() {
     Print(x);

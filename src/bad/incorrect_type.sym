@@ -1,4 +1,4 @@
-:> Odkomentuj wybrane
+:> Uncomment choosen
 
 Fun Int foo() { return 42; };
 

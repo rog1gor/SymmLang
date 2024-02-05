@@ -11,5 +11,5 @@ eif (False) {
     Print(x)
 };
 
-Let String x = "Bardzo ładne liczby :D";
+Let String x = "Very pretty numbers :D";
 Print(x);

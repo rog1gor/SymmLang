@@ -16,5 +16,5 @@ if ("KOZA" == z) {
 
 Print("Kwadraty cyfr:");
 for (i in 0...10) {
-    Print (i, "do kwadratu to:", i * i);
+    Print (i, "squared is:", i * i);
 };

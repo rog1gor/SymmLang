@@ -1,0 +1,7 @@
+Fun Int x(choice) {
+    if (choice) {
+        return 14369;
+    }
+};
+
+Print(x(True), "Here we returned a value", x(False), "And here not");

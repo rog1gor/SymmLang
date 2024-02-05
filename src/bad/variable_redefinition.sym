@@ -1,4 +1,4 @@
 Let Int x = 42;
-:> Odkomentuj wybrane
+:> Uncomment choosen
 :> Let String x = "KOZA";
 :> Fun Bool x() { return True; };

@@ -1,26 +1,26 @@
-:> Trzy typy
+:> Three types
 Let Int x;
 Let Bool y;
 Let String z;
 Print (x, y, z);
 
-:> Literały
+:> Literals
 Let Int a = 42;
 Let Bool b = True;
 Let String c = "KOZA W ZAŚWIATACH";
 Print(a, b, c);
 
-:> Arytmetyka
+:> Arithmetics
 Print(2 + 5 * 3 - 100 / 7 % 5);  :> 2 + 15 - 4
 
-:> Porównania
+:> Comparison
 Print(5 < 6, 5 <= 3, 5 > 6, 5 >= 3, 5 == 5, 5 == 6, 5 != 5, 5 != 6);
 
-:> Przypisanie
+:> Variable assignments
 x = 14369;
 y = True;
 z = "KOZA W ZAŚWIATACH";
 Print(x, y, z);
 
-:> Dodawanie Stringów
+:> String addition
 Print("KOZA" + "W" + "ZAŚWIATACH");

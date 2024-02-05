@@ -1,0 +1,27 @@
+:> if
+Let Bool f = False;
+Let Bool t = True;
+if (!f) {
+    Print("First if");
+};
+
+if (t || f) {
+    Print("Second if");
+};
+
+if (t && f) {
+    Print("This won't get printed");
+};
+
+:> eif
+eif (f) {
+    Print("This won't get printed");
+} else {
+    Print("First eif");
+};
+
+eif (t) {
+    Print("Second eif");
+} else {
+    Print("this won't get printed");
+};

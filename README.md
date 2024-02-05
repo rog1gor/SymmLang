@@ -39,7 +39,7 @@ Language description:
 Uncommon syntax:
 * In case of declaring a variable without initializing it, the default value will be assigned (0 for Int, False for Bool, and "" aka. empty string for String)
 * The FunT type does not have a default value, therefore in case of trying to create an uninitialized variable of type FunT, the Error will be thrown
-* The language supports read-only variables for Int, Bool, and String types. To create a read-only variable, there is a Read keyword
+* The language supports read-only variables for Int, Bool, and String types. To create a read-only variable, there is a Read keyword. you can create read-only variable without assigning the value!
 * As before, read-only is not supported for FunT type
 * There is no Void type
 * There are two different if expressions.
