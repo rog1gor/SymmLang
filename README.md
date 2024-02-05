@@ -2,7 +2,7 @@
 Interpreter for my language (Symm), implemented in Haskell
 
 What does the language allow:
-1. three types -> Int, Bool, String, FunT
+1. three types: Int, Bool, String, FunT
 2. literals, arithmetics, comparison
 3. variables, variable assignment
 4. read-only variables
