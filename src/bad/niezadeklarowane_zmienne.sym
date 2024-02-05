@@ -1,0 +1,2 @@
+Let Int x = 5;
+Print(x + y);

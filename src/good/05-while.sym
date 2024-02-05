@@ -1,0 +1,6 @@
+:> while
+Let Int x = 1;
+while (x < 100) {
+    x = x + x;
+};
+Print("Pierwsza potęga dwójki większa od 100 to:", x);

@@ -1,0 +1,15 @@
+:> Odkomentuj wybrane
+Let Int x = 14369;
+Fun Int p() {
+    Print(x);
+    :> Print(y);
+    return 0;
+};
+Let Int y = 146543;
+Print(p());
+
+if (True) {
+    Let Int a = 42;
+    Print("Liczba:", a);
+};
+:> Print("Liczba:", a);

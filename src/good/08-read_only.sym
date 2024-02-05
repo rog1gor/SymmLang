@@ -1,0 +1,20 @@
+Read Int x = 42;
+Read Bool y = True;
+Read String z = "KOZA";
+
+if (42 == x) {
+    Print("OK");
+};
+
+if (y != !y) {
+    Print("OK");
+};
+
+if ("KOZA" == z) {
+    Print("OK");
+};
+
+Print("Kwadraty cyfr:");
+for (i in 0...10) {
+    Print (i, "do kwadratu to:", i * i);
+};

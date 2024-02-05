@@ -1,0 +1,32 @@
+:> Odkomentuj wybrane
+
+Fun Int foo() { return 42; };
+
+Let Int x = 42;
+:> x = "KOZA";
+
+:> Let Bool y =  2 * 3;
+
+:> Print(!x);
+
+Let Bool y = True;
+:> Print(-y);
+
+:> Print(True * False);
+:> Print(foo * "KOZA");
+
+:> Print(5 + True);
+
+:> Print(True <= False);
+:> Print("KOZA" > "ZAŚWIATY");
+
+:> Print(5 && 1);
+:> Print(5 || 1);
+
+:> Let Int y = "KOZA";
+:> Read Int y = "KOZA";
+
+:> if (2 * 3) {};
+:> eif (2 + 2) {} else {};
+:> while (-x) {};
+:> for (i in 1..."STR") {};

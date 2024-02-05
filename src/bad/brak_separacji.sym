@@ -1,0 +1,5 @@
+Let Int x = 5;
+if (x == 5) {
+    x = 7;
+}
+Print("Nic się nie wypisze");

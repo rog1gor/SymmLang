@@ -1,0 +1,4 @@
+Fun Int x() {
+    return "KOZA";
+};
+Print(x());

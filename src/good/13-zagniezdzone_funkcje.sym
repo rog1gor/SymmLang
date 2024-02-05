@@ -1,0 +1,15 @@
+Fun Int foo(x) {
+    Let Int y = 42;
+    Fun String bar() {
+        Let Int z = 14369;
+        Print("Funkcja Bar", x, y, z);
+        return "Bar";
+    };
+    Fun String foobar(z) {
+        Print("Funkcja FooBar", x, y, z());
+        return "FooBar";
+    };
+    Print(foobar(bar));
+    return x;
+};
+Let Int x = foo(5);

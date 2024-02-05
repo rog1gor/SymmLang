@@ -1,0 +1,15 @@
+if (True) {
+    Let Int x = 42;
+    Print(x);
+};
+
+eif (False) {
+    Let Int x = 14369;
+    Print(x);
+} else {
+    Let Int x = 146543;
+    Print(x)
+};
+
+Let String x = "Bardzo ładne liczby :D";
+Print(x);

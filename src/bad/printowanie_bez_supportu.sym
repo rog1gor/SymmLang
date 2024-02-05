@@ -1,0 +1,4 @@
+Fun Int x() {
+    return 42;
+};
+Print(x);

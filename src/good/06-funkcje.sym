@@ -1,0 +1,36 @@
+:> Funkcje
+Fun String koza(x, y, z) {
+    Print(x, y, z);
+    return x + y + z;
+};
+Print(koza("KOZA", "W", "ZAŚWIATACH"));
+
+:> Rekurencja
+Fun Int gcd(a, b) {
+    if (a % b == 0) {
+        return b;
+    };
+    return gcd(b, a % b);
+};
+
+Print(gcd(6, 13));  :> 1
+Print(gcd(2048, 96));  :> 32
+Print(gcd(14369, 146543));  :> 1 (obie pierwsze)
+
+:> Typ FunT
+Fun Int x() {
+    return 5;
+};
+Let FunT y = x;
+Print("Aplikacja zmiennej funkcyjnej:", y());
+
+:> Brak typowania argumentów
+Fun String untyped(choice, differ) {
+    eif (choice) {
+        return "NWD(14369, 146543) = " + differ(14369, 146543);
+    } else {
+        return "Int: " + differ;
+    };
+};
+Print(untyped(False, 42));
+Print(untyped(True, gcd));

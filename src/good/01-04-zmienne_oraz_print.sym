@@ -1,0 +1,26 @@
+:> Trzy typy
+Let Int x;
+Let Bool y;
+Let String z;
+Print (x, y, z);
+
+:> Literały
+Let Int a = 42;
+Let Bool b = True;
+Let String c = "KOZA W ZAŚWIATACH";
+Print(a, b, c);
+
+:> Arytmetyka
+Print(2 + 5 * 3 - 100 / 7 % 5);  :> 2 + 15 - 4
+
+:> Porównania
+Print(5 < 6, 5 <= 3, 5 > 6, 5 >= 3, 5 == 5, 5 == 6, 5 != 5, 5 != 6);
+
+:> Przypisanie
+x = 14369;
+y = True;
+z = "KOZA W ZAŚWIATACH";
+Print(x, y, z);
+
+:> Dodawanie Stringów
+Print("KOZA" + "W" + "ZAŚWIATACH");

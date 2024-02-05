@@ -1,0 +1,4 @@
+Fun Int x(a, b, c) { return a + b + c; };
+:> Odkomentuj wybrane
+:> Print(x(2, 5));
+:> Print(x(2, 5, 7, 9));
