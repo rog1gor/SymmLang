@@ -1,27 +1,26 @@
 # SymmLang
-Interpreter for my own language, implemented in Haskell
+Interpreter for my language, implemented in Haskell
 
 Dostarczone funkcjonalności języka :
-        + 1. (trzy typy -> Int, Bool, String)
-        + 2. (literały, arytmetyka, porównania)
-        + 3. (zmienne, przypisanie)
-        + 4. (print)
-        + 5. (while, if)
-        + 6. (funkcje lub procedury, rekurencja)
-        + 7. (zmienne read-only i pętla for)
-        + 8. (statyczne wiązanie)
-                - 09. (przesłanianie)
-        + 9. (obsługa błędów wykonania)
-        + 10. (funkcje zwracające wartość)
-        + 11. (2) (funkcje zagnieżdżone ze statycznym wiązaniem)
+1. (trzy typy -> Int, Bool, String)
+2. (literały, arytmetyka, porównania)
+3. (zmienne, przypisanie)
+4. (print)
+5. (while, if)
+6. (funkcje lub procedury, rekurencja)
+7. (zmienne read-only i pętla for)
+8. (statyczne wiązanie)
+9. (obsługa błędów wykonania)
+10. (funkcje zwracające wartość)
+11. (funkcje zagnieżdżone ze statycznym wiązaniem)
 
 W folderze good/ znajdują się przykłady dobrego użycia, a w folderze bad/ złego.
 
 Uruchomienie interpretera:
-    1. make
-    2. ./interpreter "nazwa-programu"
+1. make
+2. ./interpreter "nazwa-programu"
 Czyszczenie plików:
-    1. make clean
+1. make clean
 Uwaga: Pliki w folderze Grammar są CZĘŚCIOWO wygenerowane przy pomocy programu bnfc na gramatyce zapisanej w grammar.cf. Oznacza to, że nie należy go usuwać i ponownie generować, ponieważ zmiany naniesione ręcznie nie zostaną zaaplikowane, co spowoduje problemy przy kompilacji interpretera
 
 Opis języka:
